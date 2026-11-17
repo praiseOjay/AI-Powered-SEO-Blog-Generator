@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
-    "build:cf": "NITRO_PRESET=cloudflare_module nuxt build",
+    "build:cf": "cross-env NITRO_PRESET=cloudflare_module nuxt build",
     "start": "node .output/server/index.mjs",
     "preview": "nuxt preview",
     "seed": "tsx scripts/seed.ts",
@@ -17,6 +17,7 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "cross-env": "^10.1.0",
     "tsx": "^4.20.0",
     "typescript": "^5.9.0",
     "vitest": "^3.2.0",
