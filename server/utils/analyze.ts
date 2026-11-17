@@ -136,5 +136,5 @@ export function analyzeDataset(csv: ParsedCsv, sourceFileName: string, opts: Opt
     }
   }
 
-  return { sourceFileName, metric, columns, rows, insights, categories, truncated }
+  return { sourceFileName, metric, nameKey, columns, rows, insights, categories, truncated }
 }

@@ -5,6 +5,15 @@ const { data: blog } = await useFetch<BlogData>(`/api/blogs/${route.params.slug}
 if (!blog.value) throw createError({ statusCode: 404, statusMessage: 'Blog not found', fatal: true })
 const b = blog.value
 const url = `${useRequestURL().origin}/blog/${b.slug}`
+// Entry list for the ItemList JSON-LD: name column + optional website column, capped to keep the page light.
+const nameKey = b.nameKey ?? b.columns.find(c => c.type === 'text')?.key
+const urlKey = b.columns.find(c => c.type === 'url')?.key
+const itemList = b.rows.slice(0, 100).flatMap((r, i) => {
+  const name = nameKey ? r[nameKey] : null
+  if (typeof name !== 'string') return []
+  const site = urlKey ? String(r[urlKey] ?? '') : ''
+  return [{ '@type': 'ListItem', position: Number(r._rank ?? i + 1), name, ...(site ? { url: /^https?:/i.test(site) ? site : `https://${site}` } : {}) }]
+})
 useSeoMeta({
   title: b.copy.title, description: b.copy.metaDescription,
   ogTitle: b.copy.title, ogDescription: b.copy.metaDescription, ogType: 'article', ogUrl: url,
@@ -14,7 +23,7 @@ useHead({
   link: [{ rel: 'canonical', href: url }],
   script: [{ type: 'application/ld+json', innerHTML: JSON.stringify([
     { '@context': 'https://schema.org', '@type': 'Article', headline: b.copy.title, description: b.copy.metaDescription, datePublished: b.createdAt, mainEntityOfPage: url },
-    { '@context': 'https://schema.org', '@type': 'ItemList', name: b.copy.h1, numberOfItems: b.rows.length },
+    { '@context': 'https://schema.org', '@type': 'ItemList', name: b.copy.h1, numberOfItems: b.rows.length, itemListOrder: 'https://schema.org/ItemListOrderAscending', itemListElement: itemList },
     { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: b.copy.faq.map(f => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })) }
   ]).replace(/</g, '\\u003c') }]
 })

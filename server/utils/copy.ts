@@ -16,10 +16,10 @@ export function templateCopy(a: Analysis, topicHint?: string): BlogCopy {
   return {
     topic,
     title: `${topic}: Top ${n} Ranked${byMetric} (${year})`.slice(0, 70),
-    metaDescription: `Explore the top ${n} ${topic.toLowerCase()}${byMetric}, with a full ranking table, key statistics and insights.`.slice(0, 158),
+    metaDescription: `Explore the top ${n} ${topic}${byMetric}, with a full ranking table, key statistics and insights.`.slice(0, 158),
     h1: `${topic}: Top ${n}${byMetric}`,
     intro: [
-      `This page ranks ${n} entries in ${topic.toLowerCase()}${byMetric}. Use the table below to compare them side by side.`,
+      `This page ranks ${n} entries in ${topic}${byMetric}. Use the table below to compare them side by side.`,
       lead ? `${lead.detail}` : `Scroll down for the key statistics derived from the dataset.`
     ],
     takeaways: a.insights.slice(0, 4).map(i => i.detail),

@@ -30,3 +30,12 @@ describe('analyzeDataset', () => {
     expect(c.metaDescription.length).toBeLessThanOrEqual(160)
   })
 })
+
+describe('template copy casing', () => {
+  it('keeps the topic exactly as given (e.g. acronyms)', () => {
+    const a = analyzeDataset(parseCsv(readFileSync('tests/fixtures/sample.csv', 'utf8')), 'sample.csv')
+    const c = templateCopy(a, 'UK fintech companies')
+    expect(c.intro[0]).toContain('UK fintech companies')
+    expect(c.metaDescription).toContain('UK fintech companies')
+  })
+})

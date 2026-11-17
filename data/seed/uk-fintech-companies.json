@@ -1,6 +1,6 @@
 {
   "slug": "uk-fintech-companies",
-  "createdAt": "2026-11-17T22:00:44.222Z",
+  "createdAt": "2026-11-17T22:48:22.505Z",
   "generatedBy": "template",
   "sourceFileName": "fintech.csv",
   "metric": {
@@ -9,6 +9,7 @@
     "unit": "currency",
     "symbol": "£"
   },
+  "nameKey": "c1",
   "columns": [
     {
       "key": "_rank",
@@ -1408,10 +1409,10 @@
   "copy": {
     "topic": "UK fintech companies",
     "title": "UK fintech companies: Top 100 Ranked by Total Raised (2026)",
-    "metaDescription": "Explore the top 100 uk fintech companies by Total Raised, with a full ranking table, key statistics and insights.",
+    "metaDescription": "Explore the top 100 UK fintech companies by Total Raised, with a full ranking table, key statistics and insights.",
     "h1": "UK fintech companies: Top 100 by Total Raised",
     "intro": [
-      "This page ranks 100 entries in uk fintech companies by Total Raised. Use the table below to compare them side by side.",
+      "This page ranks 100 entries in UK fintech companies by Total Raised. Use the table below to compare them side by side.",
       "Nevis leads with £30.3m, 5% of the total."
     ],
     "takeaways": [

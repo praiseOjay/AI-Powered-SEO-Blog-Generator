@@ -30,6 +30,8 @@ export interface BlogData {
   copy: BlogCopy
   metric: Metric | null
   columns: Column[]
+  /** Key of the column holding each entry's name (older seeds may lack it). */
+  nameKey?: string | null
   rows: Record<string, Cell>[]
   insights: Insight[]
   categories: CategoryBreakdown[]
