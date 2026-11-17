@@ -87,7 +87,7 @@ export function analyzeDataset(csv: ParsedCsv, sourceFileName: string, opts: Opt
     const vs = rows.map(r => r[metric.key]).filter((v): v is number => typeof v === 'number')
     if (vs.length) {
       const total = vs.reduce((a, b) => a + b, 0)
-      insights.push({ label: `Total ${metric.label}`, value: fmt(total), detail: `Combined ${metric.label} across all ${vs.length} entries is ${fmt(total)}.` })
+      insights.push({ label: /^total/i.test(metric.label) ? metric.label : `Total ${metric.label}`, value: fmt(total), detail: `Combined ${metric.label} across all ${vs.length} entries is ${fmt(total)}.` })
       insights.push({ label: `Median ${metric.label}`, value: fmt(median(vs)), detail: `The median entry has ${fmt(median(vs))}, versus a mean of ${fmt(total / vs.length)}.` })
       const sorted = [...vs].sort((a, b) => b - a)
       if (nameKey) {
@@ -98,7 +98,7 @@ export function analyzeDataset(csv: ParsedCsv, sourceFileName: string, opts: Opt
       if (sorted.length >= 20) {
         const k = 10
         const share = sorted.slice(0, k).reduce((a, b) => a + b, 0) / total
-        insights.push({ label: `Top ${k} share`, value: pct(share), detail: `The ${k} biggest entries account for ${pct(share)} of the total ${metric.label}.` })
+        insights.push({ label: `Top ${k} share`, value: pct(share), detail: `The ${k} biggest entries account for ${pct(share)} of the overall total.` })
       }
     }
   }

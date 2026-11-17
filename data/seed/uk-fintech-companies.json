@@ -1,0 +1,1444 @@
+{
+  "slug": "uk-fintech-companies",
+  "createdAt": "2026-11-17T21:38:12.784Z",
+  "generatedBy": "template",
+  "sourceFileName": "fintech.csv",
+  "metric": {
+    "key": "c5",
+    "label": "Total Raised",
+    "unit": "currency",
+    "symbol": "£"
+  },
+  "columns": [
+    {
+      "key": "_rank",
+      "label": "Rank",
+      "type": "rank"
+    },
+    {
+      "key": "c1",
+      "label": "Company",
+      "type": "text"
+    },
+    {
+      "key": "c2",
+      "label": "Region",
+      "type": "text"
+    },
+    {
+      "key": "c3",
+      "label": "Stage",
+      "type": "text"
+    },
+    {
+      "key": "c4",
+      "label": "Employees",
+      "type": "text"
+    },
+    {
+      "key": "c5",
+      "label": "Total Raised",
+      "type": "currency"
+    },
+    {
+      "key": "c6",
+      "label": "Description",
+      "type": "text"
+    },
+    {
+      "key": "c7",
+      "label": "Website",
+      "type": "url"
+    },
+    {
+      "key": "c8",
+      "label": "Industries",
+      "type": "text"
+    }
+  ],
+  "rows": [
+    {
+      "_rank": 1,
+      "c0": 1,
+      "c1": "Nevis",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 30314247,
+      "c6": "Nevis develops an AI platform for wealth management.",
+      "c7": "https://www.neviswealth.com/",
+      "c8": "Application software; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 2,
+      "c0": 2,
+      "c1": "Januus.io",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 27949436,
+      "c6": "Januus.io develops a cryptowallet-to-identity database which provides ownership data for cryptocurrency assets, wallets and transactions.",
+      "c7": "https://januus.io/",
+      "c8": "Application software; Data management; Data provision and analysis; Risk and compliance; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 3,
+      "c0": 3,
+      "c1": "Adfin",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "25-49",
+      "c5": 24222973,
+      "c6": "Adfin develops an online platform which aims to reduce the administrative burden of invoicing and payments for businesses.",
+      "c7": "https://www.adfin.com/",
+      "c8": "Application software; Assistants, secretaries and administrative support; Budgeting and financial management; Payment processing"
+    },
+    {
+      "_rank": 4,
+      "c0": 4,
+      "c1": "TreeCard",
+      "c2": "South West",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 23665662,
+      "c6": "TreeCard develops wooden bank cards and a mobile app that enables users to track their spending and utilises surcharge profits to fund reforestation programmes.",
+      "c7": "https://www.treecard.org/",
+      "c8": "Application software; Banking"
+    },
+    {
+      "_rank": 5,
+      "c0": 5,
+      "c1": "BLEND Network",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 20000000,
+      "c6": "BLEND Network operates a P2P website that connect lenders with those looking to borrow in order to purchase property.",
+      "c7": "https://blendnetwork.com/",
+      "c8": "Application software; Loans, debt and grants"
+    },
+    {
+      "_rank": 6,
+      "c0": 6,
+      "c1": "TuningBill",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "<5",
+      "c5": 19094618,
+      "c6": "TuningBill develops a cross-border invoice discounting tool for investors, buyers and sellers, aiming to allow users to evaluate foreign exchange risks and facilitate discounts for preferred suppliers.",
+      "c7": "https://www.tuningbill.com/",
+      "c8": "Application software; Banking; Payment processing"
+    },
+    {
+      "_rank": 7,
+      "c0": 7,
+      "c1": "nsave",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "25-49",
+      "c5": 16548453,
+      "c6": "nsave operates global banking accounts for transferring money and investing.",
+      "c7": "https://www.nsave.com/",
+      "c8": "Application software; Banking; Currency exchange; Payment processing; Trading platforms"
+    },
+    {
+      "_rank": 8,
+      "c0": 8,
+      "c1": "Nous",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "50-99",
+      "c5": 15368718,
+      "c6": "Nous develops software designed to help users track household bills and planned price rises for utilities and service providers, using AI to suggest potential steps users can take to save money.",
+      "c7": "https://www.nous.co/",
+      "c8": "Application software; Budgeting and financial management; Data provision and analysis"
+    },
+    {
+      "_rank": 9,
+      "c0": 9,
+      "c1": "capsa.ai",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 15220000,
+      "c6": "capsa.ai develops AI software for private equity firms which aims to accelerate the due diligence process through automating reporting and analysis.",
+      "c7": "https://capsa.ai/",
+      "c8": "Application software; Data provision and analysis; Investment banking and corporate finance; Private equity and venture capital; Risk and compliance; Robots and automation; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 10,
+      "c0": 10,
+      "c1": "Outpost",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 13000000,
+      "c6": "Outpost develops an automated Merchant of Record and Tax of Record platform.",
+      "c7": "https://outpost.ai/",
+      "c8": "Accountancy and tax; Application software; Assistants, secretaries and administrative support; Data provision and analysis; Lead generation and sales support; Payment processing; Robots and automation"
+    },
+    {
+      "_rank": 11,
+      "c0": 11,
+      "c1": "Ooodles",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "25-49",
+      "c5": 11823263,
+      "c6": "Ooodles rents technology devices, such as laptops, computers and phones to businesses.",
+      "c7": "https://www.ooodles.com/",
+      "c8": "Application software; Electronics hardware; Mobile, internet and wireless hardware; Product rental and hire; Technology consultancy and IT and telecommunications support"
+    },
+    {
+      "_rank": 12,
+      "c0": 12,
+      "c1": "Lopay",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "25-49",
+      "c5": 11343153,
+      "c6": "Lopay develops a payment processor and software for retail vendors.",
+      "c7": "https://lopay.com/",
+      "c8": "Application software; Payment processing"
+    },
+    {
+      "_rank": 13,
+      "c0": 13,
+      "c1": "DoorFeed",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "25-49",
+      "c5": 10478573,
+      "c6": "DoorFeed develops a platform that provides investment funds with end-to-end management and analysis of their large-scale property portfolios.",
+      "c7": "https://www.doorfeed.com/",
+      "c8": "Application software; Data provision and analysis; Property and land assets investment"
+    },
+    {
+      "_rank": 14,
+      "c0": 14,
+      "c1": "Blanche Wealth",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "N/A",
+      "c5": 10228251,
+      "c6": "Blanche Wealth develops AI-based wealth management software, using conversational agents which aim to offer personalised financial guidance to a wider range of people.",
+      "c7": "https://www.blanchewealth.com/",
+      "c8": "Application software; Budgeting and financial management; Data provision and analysis; Robots and automation; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 15,
+      "c0": 15,
+      "c1": "Clove Group",
+      "c2": "North West",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 10000000,
+      "c6": "Clove Group develops technology for broadening access to financial advice.",
+      "c7": "https://www.clove.com/",
+      "c8": "Application software; Budgeting and financial management; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 16,
+      "c0": 16,
+      "c1": "multifi",
+      "c2": "South West",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 9999999,
+      "c6": "multifi provides small and medium businesses with flexible credit limits.",
+      "c7": "https://multifi.co.uk/",
+      "c8": "Application software; Loans, debt and grants"
+    },
+    {
+      "_rank": 17,
+      "c0": 17,
+      "c1": "illio",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 9058651,
+      "c6": "illio develops a cloud-based investment platform and mobile app, designed to help investors make well informed investment choices.",
+      "c7": "https://www.illio.com/",
+      "c8": "Application software; Data management; Data provision and analysis; Risk and compliance; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 18,
+      "c0": 18,
+      "c1": "Infact",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 8500000,
+      "c6": "Infact develops a financial services platform that allows lenders to search, store, and analyse credit information.",
+      "c7": "https://infact.io/",
+      "c8": "Application software; Banking; Budgeting and financial management; Credit ratings and scores; Data provision and analysis; Investment banking and corporate finance; Loans, debt and grants; Risk and compliance"
+    },
+    {
+      "_rank": 19,
+      "c0": 19,
+      "c1": "Penny",
+      "c2": "South West",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 8199978,
+      "c6": "Penny develops a mobile app which utilises AI to find users' different pension pots and transfers and displays them in one place.",
+      "c7": "https://pennypension.com/",
+      "c8": "Accountancy and tax; Application software; Banking; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 20,
+      "c0": 20,
+      "c1": "Agio Ratings",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 8145730,
+      "c6": "Agio Ratings develops risk analytics and monitoring software for digital assets, enabling risk pricing.",
+      "c7": "https://www.agioratings.io/",
+      "c8": "Application software; Data provision and analysis; Risk and compliance; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 21,
+      "c0": 21,
+      "c1": "Tokenovate",
+      "c2": "East of England",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 7999993,
+      "c6": "Tokenovate develops software designed to allow users to manage their digital asset and smart contract trades.",
+      "c7": "https://www.tokenovate.com/",
+      "c8": "Application software; Investment banking and corporate finance; Risk and compliance; Trading platforms; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 22,
+      "c0": 22,
+      "c1": "Alvara Protocol",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "N/A",
+      "c5": 7703626,
+      "c6": "Alvara develops and manages onchain basket tokens and a protocol ecosystem for creating and trading tokenized portfolios.",
+      "c7": "https://alvara.xyz/",
+      "c8": "Application software; Currency exchange; Technology consultancy and IT and telecommunications support"
+    },
+    {
+      "_rank": 23,
+      "c0": 23,
+      "c1": "Translucent",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "25-49",
+      "c5": 7700000,
+      "c6": "Translucent develops an accounting platform that integrates with existing financial apps and systems, with the aim of consolidating financial data into one place.",
+      "c7": "https://www.translucent.io/",
+      "c8": "Accountancy and tax; Application software; Budgeting and financial management; Data management; Data provision and analysis"
+    },
+    {
+      "_rank": 24,
+      "c0": 24,
+      "c1": "Simpler.",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 7565414,
+      "c6": "Simpler. develops integrated one-click checkout software that generates a single online shopper identity for consumers across all sites, aiming to support checkout conversions for online retailers.",
+      "c7": "https://www.simpler.so/",
+      "c8": "Application software; Data provision and analysis; Lead generation and sales support; Online retailing; Payment processing"
+    },
+    {
+      "_rank": 25,
+      "c0": 25,
+      "c1": "Boson Protocol",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 7551844,
+      "c6": "Boson Protocol operates a marketplace designed to allow users to trade real products and services with blockchain.",
+      "c7": "https://www.bosonprotocol.io/",
+      "c8": "Application software; Online marketplace"
+    },
+    {
+      "_rank": 26,
+      "c0": 26,
+      "c1": "Merge",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 7512375,
+      "c6": "Merge develops an online banking platform which aims to provide banking and payment solutions for web3 and crypto companies.",
+      "c7": "https://www.merge.money/",
+      "c8": "Application software; Banking; Payment processing"
+    },
+    {
+      "_rank": 27,
+      "c0": 27,
+      "c1": "Abbeycross",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 7238602,
+      "c6": "Abbeycross operates a trading and compliance marketplace for businesses, specialising in emerging market currencies",
+      "c7": "https://www.abbeycross.com/",
+      "c8": "Application software; Data provision and analysis; Payment processing; Risk and compliance; Trading platforms"
+    },
+    {
+      "_rank": 28,
+      "c0": 28,
+      "c1": "QFEX",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 7000000,
+      "c6": "QFEX develops a trading platform that enables users to buy and sell equities, commodities, forex, and perpetual futures.",
+      "c7": "https://www.qfex.com/",
+      "c8": "Application software; Trading platforms"
+    },
+    {
+      "_rank": 29,
+      "c0": 29,
+      "c1": "ABEX",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 6938971,
+      "c6": "ABEX develops a software platform which aims to use machine learning to optimise cryptocurrency trading.",
+      "c7": "https://www.abex.capital/",
+      "c8": "Application software; Banking; Currency exchange; Data provision and analysis; Trading platforms; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 30,
+      "c0": 30,
+      "c1": "Palm",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 6692702,
+      "c6": "Palm develops a treasury management software platform which uses artificial intelligence (AI).",
+      "c7": "https://www.usepalm.com/",
+      "c8": "Application software; Banking; Budgeting and financial management; Data provision and analysis; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 31,
+      "c0": 31,
+      "c1": "PawaPay",
+      "c2": "South East",
+      "c3": "Seed",
+      "c4": "100-249",
+      "c5": 6577677,
+      "c6": "PawaPay develops a mobile payment processing API for businesses.",
+      "c7": "https://www.pawapay.co.uk/",
+      "c8": "Application software; Payment processing"
+    },
+    {
+      "_rank": 32,
+      "c0": 32,
+      "c1": "Five",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 6410902,
+      "c6": "Five develops a device which uses palm recognition for payments.",
+      "c7": "https://five.id/",
+      "c8": "Electronics hardware; Embedded systems; Payment processing; Rewards, loyalty schemes and vouchers"
+    },
+    {
+      "_rank": 33,
+      "c0": 33,
+      "c1": "Fortify Solutions",
+      "c2": "East of England",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 6372892,
+      "c6": "Fortify Solutions develops fraud prevention software and provides fraud and risk consultancy services for financial institutions.",
+      "c7": "https://www.wearefortify.ai/",
+      "c8": "Application software; Banking; Management and strategy consultancy; Risk and compliance; Security and surveillance; Technology consultancy and IT and telecommunications support"
+    },
+    {
+      "_rank": 34,
+      "c0": 34,
+      "c1": "Fae",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 6114999,
+      "c6": "Fae develops a personal money companion to improve financial wellbeing.",
+      "c7": "https://www.askfae.com/",
+      "c8": "Application software; Budgeting and financial management"
+    },
+    {
+      "_rank": 35,
+      "c0": 35,
+      "c1": "FarmLend",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 6095884,
+      "c6": "FarmLend operates a digital platform that provide financial services, such as supply management and contract negotiations.",
+      "c7": "https://www.farmlend.co.uk/",
+      "c8": "Agriculture, land farming and forestry; Application software; Budgeting and financial management; Loans, debt and grants; Property and land assets investment"
+    },
+    {
+      "_rank": 36,
+      "c0": 36,
+      "c1": "PlannerPal",
+      "c2": "South West",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 5857656,
+      "c6": "PlannerPal develops AI-based software for financial advisers, automating administrative tasks such as meeting notes, client reports, and CRM updates.",
+      "c7": "https://www.plannerpal.co.uk/",
+      "c8": "Application software; Assistants, secretaries and administrative support; Budgeting and financial management; Data provision and analysis; Robots and automation; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 37,
+      "c0": 37,
+      "c1": "Cloud Capital",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 5804727,
+      "c6": "Cloud Capital develops cloud financial management software that provides forecasting, cost optimisation, and risk mitigation.",
+      "c7": "https://www.cloudcapital.co/",
+      "c8": "Accountancy and tax; Application software; Budgeting and financial management; Data management; Data provision and analysis; Risk and compliance; Robots and automation"
+    },
+    {
+      "_rank": 38,
+      "c0": 38,
+      "c1": "Seva Money",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 5642930,
+      "c6": "Seva operates a remittance platform, providing financial and healthcare services to receivers of remittances.",
+      "c7": "https://seva.money/",
+      "c8": "Application software; Banking; Currency exchange; Emergency services; Hospitals and clinics; Insurance; Medical doctors; Payment processing; Rewards, loyalty schemes and vouchers"
+    },
+    {
+      "_rank": 39,
+      "c0": 39,
+      "c1": "Mercuryo",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "250-499",
+      "c5": 5389247,
+      "c6": "Mercuryo develops a platform for fiat and crypto currencies, providing a range of services such as payment processing, currency exchange and scam protection.",
+      "c7": "https://mercuryo.io/",
+      "c8": "Application software; Data management; Data provision and analysis; Payment processing; Risk and compliance; Security and surveillance"
+    },
+    {
+      "_rank": 40,
+      "c0": 40,
+      "c1": "SSV SmartPay",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "<5",
+      "c5": 5359049,
+      "c6": "SSV SmartPay develops payment processing software, including QR and WhatsApp-based payments.",
+      "c7": "https://ssvsmartpay.co/",
+      "c8": "Application software; Banking; Budgeting and financial management; Payment processing; Rewards, loyalty schemes and vouchers"
+    },
+    {
+      "_rank": 41,
+      "c0": 41,
+      "c1": "Extended",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 5204613,
+      "c6": "Extended develops a cryptocurrency exchange platform.",
+      "c7": "https://extended.exchange/",
+      "c8": "Application software; Trading platforms; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 42,
+      "c0": 42,
+      "c1": "Montis Group",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 5172607,
+      "c6": "Montis Group develops software for the management of digital assets.",
+      "c7": "https://montis.digital/",
+      "c8": "Application software; Payment processing; Trading platforms; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 43,
+      "c0": 43,
+      "c1": "keyzy",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 5000016,
+      "c6": "keyzy develops software designed to help home buyers purchase property through a rent-to-own model.",
+      "c7": "https://www.keyzy.com/",
+      "c8": "Application software; Budgeting and financial management; Legal services; Loans, debt and grants; Property and land assets investment"
+    },
+    {
+      "_rank": 44,
+      "c0": 44,
+      "c1": "Bourn",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 5000000,
+      "c6": "Bourn develops financial software for banks using AI, provide risk management, ERP integrations and open accounting services for working capital finances.",
+      "c7": "https://www.bourn.ai/",
+      "c8": "Application software; Data provision and analysis; Investment banking and corporate finance; Robots and automation; Security and surveillance"
+    },
+    {
+      "_rank": 45,
+      "c0": 45,
+      "c1": "Rho Labs",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 4937518,
+      "c6": "Rho Labs develops an on-chain rates market platform.",
+      "c7": "https://www.rho.trading/",
+      "c8": "Application software; Currency exchange; Trading platforms"
+    },
+    {
+      "_rank": 46,
+      "c0": 46,
+      "c1": "Damisa Technologies",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "25-49",
+      "c5": 4749095,
+      "c6": "Damisa Technologies develops a platform for businesses to manage international payments using stablecoins and local currencies, aiming to streamline transactions and reduce currency exchange costs.",
+      "c7": "https://damisa.xyz/",
+      "c8": "Application software; Currency exchange; Payment processing"
+    },
+    {
+      "_rank": 47,
+      "c0": 47,
+      "c1": "Keyring Network",
+      "c2": "North West",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 4714434,
+      "c6": "Keyring Network develops tools designed to help financial service providers meet blockchain compliance.",
+      "c7": "https://keyring.network/",
+      "c8": "Application software; Investment banking and corporate finance; Risk and compliance"
+    },
+    {
+      "_rank": 48,
+      "c0": 48,
+      "c1": "Diesta",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 4616876,
+      "c6": "Diesta operates an online platform designed to automate and improve the processing of insurance payments.",
+      "c7": "https://www.diesta.co.uk/",
+      "c8": "Application software; Data provision and analysis; Insurance; Payment processing"
+    },
+    {
+      "_rank": 49,
+      "c0": 49,
+      "c1": "Benford",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 4300000,
+      "c6": "Benford provides statutory audits to companies using its own software platform, which connects to clients' accounting systems and automates data collection and testing.",
+      "c7": "https://benford.tech/",
+      "c8": "Accountancy and tax; Application software; Data provision and analysis; Robots and automation"
+    },
+    {
+      "_rank": 50,
+      "c0": 50,
+      "c1": "The London BTC Company",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "<5",
+      "c5": 4198199,
+      "c6": "The London BTC Company operates decentralized Bitcoin mining infrastructure and invests in digital asset markets.",
+      "c7": "https://ldnbtc.com/",
+      "c8": "Application software; Data centres"
+    },
+    {
+      "_rank": 51,
+      "c0": 51,
+      "c1": "Tangible",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "25-49",
+      "c5": 4095373,
+      "c6": "Tangible develops an AI-based secondary transactions auction and marketplace platform for LPs, GPs and wealth managers.",
+      "c7": "https://www.tangible-markets.com/",
+      "c8": "Application software; Data provision and analysis; Private equity and venture capital; Risk and compliance; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 52,
+      "c0": 52,
+      "c1": "Sablier",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "<5",
+      "c5": 3984436,
+      "c6": "Sablier develops token distribution infrastructure for the crypto industry.",
+      "c7": "https://sablier.com/",
+      "c8": "Application software; Banking"
+    },
+    {
+      "_rank": 53,
+      "c0": 53,
+      "c1": "Scroll Finance",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 3951149,
+      "c6": "Scroll Finance develops an online platform providing loans for landlords and homeowners.",
+      "c7": "https://www.scrollfinance.com/",
+      "c8": "Application software; Home and garden; Loans, debt and grants; Property and land assets management"
+    },
+    {
+      "_rank": 54,
+      "c0": 54,
+      "c1": "Oxford Frontier",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "<5",
+      "c5": 3871484,
+      "c6": "Oxford Frontier provides digital and fintech consultancy services for developing markets.",
+      "c7": "https://oxfordfrontier.com/",
+      "c8": "Investment banking and corporate finance; Management and strategy consultancy; Technology consultancy and IT and telecommunications support"
+    },
+    {
+      "_rank": 55,
+      "c0": 55,
+      "c1": "Ontik",
+      "c2": "Wales",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 3806464,
+      "c6": "Ontik develops a trade credit platform for businesses aiming to improve efficiency of trade account management.",
+      "c7": "https://www.ontik.io/",
+      "c8": "Application software; Data provision and analysis; Investment banking and corporate finance; Payment processing; Risk and compliance; Robots and automation; Trading platforms"
+    },
+    {
+      "_rank": 56,
+      "c0": 56,
+      "c1": "OpenCover",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 3687300,
+      "c6": "OpenCover provides insurance cover for blockchain portfolios through a range of vetted underwriters, as well as price comparison tools.",
+      "c7": "https://opencover.com/",
+      "c8": "Application software; Data aggregation; Insurance"
+    },
+    {
+      "_rank": 57,
+      "c0": 57,
+      "c1": "Profit.com",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "25-49",
+      "c5": 3635720,
+      "c6": "Profit.com develops a number of software tools for traders.",
+      "c7": "https://profit.com/",
+      "c8": "Application software; Investment banking and corporate finance; Trading platforms"
+    },
+    {
+      "_rank": 58,
+      "c0": 58,
+      "c1": "Paraglide",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 3600000,
+      "c6": "Paraglide provides AI tools to support businesses in invoice management and customer communications.",
+      "c7": "https://www.paraglide.ai/",
+      "c8": "Accountancy and tax; Application software; Assistants, secretaries and administrative support; Robots and automation"
+    },
+    {
+      "_rank": 59,
+      "c0": 59,
+      "c1": "Portfolio",
+      "c2": "North West",
+      "c3": "Seed",
+      "c4": "50-99",
+      "c5": 3457772,
+      "c6": "Portfolio provides a platform for investment into property through a mobile app.",
+      "c7": "https://portfolio.co.uk/",
+      "c8": "Application software; Property and land assets investment"
+    },
+    {
+      "_rank": 60,
+      "c0": 60,
+      "c1": "Synthex",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 3159744,
+      "c6": "Synthex develops agentic software for the financial services industry.",
+      "c7": "https://synthexhq.com/",
+      "c8": "Application software; Banking; Budgeting and financial management; Investment banking and corporate finance; Robots and automation"
+    },
+    {
+      "_rank": 61,
+      "c0": 61,
+      "c1": "Qwil",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 3104998,
+      "c6": "Qwil develops software designed to enable secure instant messaging between businesses and their clients.",
+      "c7": "https://www.qwil.io/",
+      "c8": "Application software; Social media"
+    },
+    {
+      "_rank": 62,
+      "c0": 62,
+      "c1": "Afternoon Finance",
+      "c2": "West of Scotland",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 3088833,
+      "c6": "Afternoon Finance develops an AI platform that can automate data collection, administration and analysis within the financial advisory industry.",
+      "c7": "https://www.afternoon.co.uk/",
+      "c8": "Application software; Assistants, secretaries and administrative support; Data management; Data provision and analysis; Investment banking and corporate finance; Robots and automation"
+    },
+    {
+      "_rank": 63,
+      "c0": 63,
+      "c1": "Jarvis",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 3057469,
+      "c6": "Jarvis develops a mobile app which aims to allow users to take control of and understand their pensions.",
+      "c7": "https://getjarvis.app/",
+      "c8": "Application software; Budgeting and financial management; Data provision and analysis"
+    },
+    {
+      "_rank": 64,
+      "c0": 64,
+      "c1": "BoomFi",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 3014260,
+      "c6": "BoomFi operates a crypto payment system through blockchain and traditional mediums, utilising web3.",
+      "c7": "https://www.boomfi.xyz/",
+      "c8": "Application software; Payment processing"
+    },
+    {
+      "_rank": 65,
+      "c0": 65,
+      "c1": "Artifact AI",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 2982655,
+      "c6": "Artifact AI develops an AI accounting platform.",
+      "c7": "https://www.getartifact.com/",
+      "c8": "Accountancy and tax; Application software; Data provision and analysis; Robots and automation"
+    },
+    {
+      "_rank": 66,
+      "c0": 66,
+      "c1": "Alte",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 2870667,
+      "c6": "Alte provides an online platform which offers investment management services, focusing on the European real estate market.",
+      "c7": "https://www.alteinvest.com/",
+      "c8": "Application software; Property and land assets investment; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 67,
+      "c0": 67,
+      "c1": "Sporta",
+      "c2": "South East",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 2851805,
+      "c6": "Sporta operates a digital banking and financial platform aimed at helping sports clubs, athletes, and fans manage money and grow within the sports ecosystem.",
+      "c7": "https://sporta.team/",
+      "c8": "Application software; Banking; Sports clubs; Sports venues"
+    },
+    {
+      "_rank": 68,
+      "c0": 68,
+      "c1": "ReStabilise",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "<5",
+      "c5": 2820000,
+      "c6": "ReStabilise develops a GBP and multi-currency stablecoin issuance platform.",
+      "c7": "https://restabilise.com/",
+      "c8": "Application software; Investment banking and corporate finance"
+    },
+    {
+      "_rank": 69,
+      "c0": 69,
+      "c1": "Inveztor",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 2804951,
+      "c6": "Inveztor operates an online platform which allows users to manage and maintain debt capital deals.",
+      "c7": "https://inveztor.com/",
+      "c8": "Application software; Legal services; Loans, debt and grants; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 70,
+      "c0": 70,
+      "c1": "Quartz",
+      "c2": "East of England",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 2750000,
+      "c6": "Quartz develops a personal banking AI that provides tailored financial insights, budgeting assistance, and spending analysis.",
+      "c7": "https://myquartz.ai/",
+      "c8": "Application software; Banking; Budgeting and financial management; Data provision and analysis"
+    },
+    {
+      "_rank": 71,
+      "c0": 71,
+      "c1": "Strade Base",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "<5",
+      "c5": 2730002,
+      "c6": "Strade Base develops a music royalties platform that aims to allow direct distribution and fundraising by artists.",
+      "c7": "https://stradebasegroup.com/",
+      "c8": "Application software; Distribution and wholesale; Funding platforms; Music; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 72,
+      "c0": 72,
+      "c1": "Hexopay",
+      "c2": "North East",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 2710000,
+      "c6": "Hexopay develops software designed to make global payment transactions easier for the gambling and managed risk sectors.",
+      "c7": "https://hexopay.co.uk/",
+      "c8": "Application software; Betting and gambling; Payment processing"
+    },
+    {
+      "_rank": 73,
+      "c0": 73,
+      "c1": "Tracelight",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 2700000,
+      "c6": "Tracelight develops an AI assistant plug-in for Microsoft Excel.",
+      "c7": "https://tracelight.ai/",
+      "c8": "Application software; Assistants, secretaries and administrative support; Budgeting and financial management; Data provision and analysis; Robots and automation"
+    },
+    {
+      "_rank": 74,
+      "c0": 74,
+      "c1": "Numarqe",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "<5",
+      "c5": 2698561,
+      "c6": "Numarqe provides a platform for companies to manage their corporate credit card spending.",
+      "c7": "https://www.numarqe.com/",
+      "c8": "Application software; Budgeting and financial management; Data management; Data provision and analysis"
+    },
+    {
+      "_rank": 75,
+      "c0": 75,
+      "c1": "HY10",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "25-49",
+      "c5": 2692199,
+      "c6": "HY10 develops a financial platform for ultra-high-net-worth individuals to manage transactions and access perks.",
+      "c7": "https://www.hy10.uk/",
+      "c8": "Application software; Banking; Currency exchange; Payment processing"
+    },
+    {
+      "_rank": 76,
+      "c0": 76,
+      "c1": "BOPP",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 2670550,
+      "c6": "BOPP develops payment processing software using blockchain technology.",
+      "c7": "https://bopp.io/",
+      "c8": "Application software; Payment processing"
+    },
+    {
+      "_rank": 77,
+      "c0": 77,
+      "c1": "Intick",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 2627494,
+      "c6": "Intick develops a software platform for block trading listed derivatives.",
+      "c7": "https://www.intick.com/",
+      "c8": "Application software; Data aggregation; Data provision and analysis; Investment banking and corporate finance; Trading platforms; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 78,
+      "c0": 78,
+      "c1": "Panta",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 2607530,
+      "c6": "Panta develops a SaaS platform that can be used by investment firms for managing financial indices and investment strategy tools.",
+      "c7": "https://pantaindex.com/",
+      "c8": "Application software; Data provision and analysis; Investment banking and corporate finance; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 79,
+      "c0": 79,
+      "c1": "Desia",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 2589169,
+      "c6": "Desia develops an AI productivity, automation, and analytics platform for financial services, with features that include private and public data search and the ability to generate draft documents.",
+      "c7": "https://www.desia.ai/",
+      "c8": "Application software; Assistants, secretaries and administrative support; Data provision and analysis; Private equity and venture capital; Robots and automation; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 80,
+      "c0": 80,
+      "c1": "Jamboo",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "<5",
+      "c5": 2564075,
+      "c6": "Jamboo develops a banking app which aims to offer bank accounts for members of the African diaspora, as well as access to investment opportunities in Africa.",
+      "c7": "https://jamboo.app/",
+      "c8": "Application software; Banking; Budgeting and financial management; Investment banking and corporate finance; Payment processing"
+    },
+    {
+      "_rank": 81,
+      "c0": 81,
+      "c1": "Fyde Treasury",
+      "c2": "East Midlands",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 2513677,
+      "c6": "Fyde Treasury develops a secure treasury management system for cryptocurrency assets.",
+      "c7": "https://www.fyde.fi/",
+      "c8": "Application software; Banking; Currency exchange; Data provision and analysis; Security and surveillance; Trading platforms; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 82,
+      "c0": 82,
+      "c1": "Communion",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "<5",
+      "c5": 2500000,
+      "c6": "Communion develops an app which aims to help users build their wealth, providing users with a savings account and offering coaching and tools to encourage behaviour changes.",
+      "c7": "https://www.communionsaves.com/",
+      "c8": "Application software; Budgeting and financial management; Tutoring, training, coaching and skills development; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 83,
+      "c0": 83,
+      "c1": "SSImple",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 2466855,
+      "c6": "SSImple operates a software platform for the SSI (Standing Settlement Instruction) process within capital trading.",
+      "c7": "https://ssimple.io/",
+      "c8": "Application software; Budgeting and financial management; Data provision and analysis; Investment banking and corporate finance; Trading platforms; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 84,
+      "c0": 84,
+      "c1": "Revax",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 2464892,
+      "c6": "Revax develops AI-based software that automates the researching and drafting of client deliverables for tax advisory businesses.",
+      "c7": "https://revax.ai/",
+      "c8": "Accountancy and tax; Application software; Assistants, secretaries and administrative support; Data provision and analysis; Robots and automation"
+    },
+    {
+      "_rank": 85,
+      "c0": 85,
+      "c1": "Briefcase",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 2392499,
+      "c6": "Briefcase develops an automated AI accounting platform.",
+      "c7": "https://briefcase.so/",
+      "c8": "Accountancy and tax; Application software; Assistants, secretaries and administrative support; Robots and automation"
+    },
+    {
+      "_rank": 86,
+      "c0": 86,
+      "c1": "Terrapin",
+      "c2": "East of Scotland",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 2384984,
+      "c6": "Terrapin develops a platform that can be used to convert debt market documents into processable data.",
+      "c7": "https://terrapinfinance.com/",
+      "c8": "Application software; Data aggregation; Investment banking and corporate finance"
+    },
+    {
+      "_rank": 87,
+      "c0": 87,
+      "c1": "The Money Platform",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 2354062,
+      "c6": "The Money Platform operates a website which offers peer-to-peer lending services, specialising in short-term loans.",
+      "c7": "https://themoneyplatform.com/",
+      "c8": "Application software; Banking; Loans, debt and grants"
+    },
+    {
+      "_rank": 88,
+      "c0": 88,
+      "c1": "Kana Earth",
+      "c2": "North West",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 2306530,
+      "c6": "Kana Earth develops a platform providing information on carbon schemes with a focus on promoting and managing investments.",
+      "c7": "https://www.kana.earth/",
+      "c8": "Application software; Budgeting and financial management; Data aggregation; Investment banking and corporate finance; Land, water and air management"
+    },
+    {
+      "_rank": 89,
+      "c0": 89,
+      "c1": "Riva",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 2281422,
+      "c6": "Riva develops payment processing software for cross-border transactions.",
+      "c7": "https://rivamoney.com/",
+      "c8": "Application software; Banking; Currency exchange; Payment processing"
+    },
+    {
+      "_rank": 90,
+      "c0": 90,
+      "c1": "Paytia",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 2214089,
+      "c6": "Paytia develops Pay729, a telephone payments system that allows customers to pay companies over the phone, without reading out their card details.",
+      "c7": "https://www.paytia.com/",
+      "c8": "Application software; Payment processing; Security and surveillance"
+    },
+    {
+      "_rank": 91,
+      "c0": 91,
+      "c1": "TomNext",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 2171517,
+      "c6": "TomNext develops a platform for use in alternative asset investment that helps with diligence and subscription processes.",
+      "c7": "https://www.tomnext.co/",
+      "c8": "Application software; Assistants, secretaries and administrative support; Legal services; Risk and compliance; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 92,
+      "c0": 92,
+      "c1": "Payaca",
+      "c2": "South West",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 2160005,
+      "c6": "Payaca develops software designed to help tradespeople and homeowners find financing for home improvements.",
+      "c7": "https://www.payaca.com/",
+      "c8": "Application software; Loans, debt and grants; Tradespeople and trade services"
+    },
+    {
+      "_rank": 93,
+      "c0": 93,
+      "c1": "BuyMaterials",
+      "c2": "East of Scotland",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 2111105,
+      "c6": "BuyMaterials develops and operates an online marketplace for buying a range of building materials connecting consumers and businesses.",
+      "c7": "https://buymaterials.com/",
+      "c8": "Application software; Building materials, tools and accessories; Online marketplace"
+    },
+    {
+      "_rank": 94,
+      "c0": 94,
+      "c1": "bopay",
+      "c2": "North West",
+      "c3": "Seed",
+      "c4": "<5",
+      "c5": 2105566,
+      "c6": "bopay develops a mobile app offering credit line solutions and rewards services.",
+      "c7": "https://bopay.co.uk/",
+      "c8": "Application software; Credit ratings and scores; Loans, debt and grants; Rewards, loyalty schemes and vouchers"
+    },
+    {
+      "_rank": 95,
+      "c0": 95,
+      "c1": "Native",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 2042791,
+      "c6": "Native operates an insurance brokerage firm, specialising in digital assets and cryptocurrency insurance, as well as developing an online risk transfer platform for brokers.",
+      "c7": "https://www.native.inc/",
+      "c8": "Application software; Insurance; Investment banking and corporate finance; Risk and compliance; Security and surveillance; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 96,
+      "c0": 96,
+      "c1": "Doshi",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 2042081,
+      "c6": "Doshi provides a crypto wallet targeted to teenagers and parents.",
+      "c7": "https://www.doshi.app/",
+      "c8": "Application software; Budgeting and financial management; Courses and educational material"
+    },
+    {
+      "_rank": 97,
+      "c0": 97,
+      "c1": "Confidante",
+      "c2": "North West",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 2019982,
+      "c6": "Confidante develops workflow management software for financial planners and wealth managers.",
+      "c7": "https://confidante.cloud/",
+      "c8": "Application software; Budgeting and financial management; Investment banking and corporate finance; Property and land assets investment; Property and land assets management; Wealth, asset and investment management"
+    },
+    {
+      "_rank": 98,
+      "c0": 98,
+      "c1": "Arctal",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "5-9",
+      "c5": 2000000,
+      "c6": "Arctal provides an AI generated platform designed to integrate climate factors and data in relation to financial products.",
+      "c7": "https://arctal.ai/",
+      "c8": "Application software; Energy management and reduction; Investment banking and corporate finance"
+    },
+    {
+      "_rank": 99,
+      "c0": 99,
+      "c1": "CapRelease",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "10-24",
+      "c5": 2000000,
+      "c6": "CapRelease develops a funding platform that provides loans and financing agreements to eCommerce businesses.",
+      "c7": "https://www.caprelease.com/",
+      "c8": "Application software; Data provision and analysis; Funding platforms; Loans, debt and grants; Online retailing"
+    },
+    {
+      "_rank": 100,
+      "c0": 100,
+      "c1": "Ledger Rocket",
+      "c2": "London",
+      "c3": "Seed",
+      "c4": "N/A",
+      "c5": 2000000,
+      "c6": "Ledger Rocket develops and provides a core banking ledger and accounting platform for financial services.",
+      "c7": "https://ledgerrocket.com/",
+      "c8": "Application software"
+    }
+  ],
+  "insights": [
+    {
+      "label": "Entries ranked",
+      "value": "100",
+      "detail": "The dataset contains 100 entries."
+    },
+    {
+      "label": "Total Raised",
+      "value": "£622m",
+      "detail": "Combined Total Raised across all 100 entries is £622m."
+    },
+    {
+      "label": "Median Total Raised",
+      "value": "£4.1m",
+      "detail": "The median entry has £4.1m, versus a mean of £6.2m."
+    },
+    {
+      "label": "Largest entry",
+      "value": "Nevis",
+      "detail": "Nevis leads with £30.3m, 5% of the total."
+    },
+    {
+      "label": "Gap between #1 and #2",
+      "value": "1.1×",
+      "detail": "The top entry is 1.1 times the size of the runner-up."
+    },
+    {
+      "label": "Top 10 share",
+      "value": "33%",
+      "detail": "The 10 biggest entries account for 33% of the overall total."
+    },
+    {
+      "label": "Most common Region",
+      "value": "London",
+      "detail": "London appears in 78 of 100 entries."
+    },
+    {
+      "label": "Top Region by Total Raised",
+      "value": "London",
+      "detail": "London entries total £505m."
+    },
+    {
+      "label": "Most common Employees",
+      "value": "10-24",
+      "detail": "10-24 appears in 49 of 100 entries."
+    },
+    {
+      "label": "Top Employees by Total Raised",
+      "value": "10-24",
+      "detail": "10-24 entries total £288m."
+    }
+  ],
+  "categories": [
+    {
+      "key": "c2",
+      "label": "Region",
+      "items": [
+        {
+          "name": "London",
+          "count": 78,
+          "total": 504646256
+        },
+        {
+          "name": "North West",
+          "count": 6,
+          "total": 24604284
+        },
+        {
+          "name": "South West",
+          "count": 5,
+          "total": 49883300
+        },
+        {
+          "name": "East of England",
+          "count": 3,
+          "total": 17122885
+        },
+        {
+          "name": "South East",
+          "count": 2,
+          "total": 9429482
+        },
+        {
+          "name": "East of Scotland",
+          "count": 2,
+          "total": 4496089
+        },
+        {
+          "name": "Wales",
+          "count": 1,
+          "total": 3806464
+        },
+        {
+          "name": "West of Scotland",
+          "count": 1,
+          "total": 3088833
+        }
+      ]
+    },
+    {
+      "key": "c4",
+      "label": "Employees",
+      "items": [
+        {
+          "name": "10-24",
+          "count": 49,
+          "total": 288366444
+        },
+        {
+          "name": "5-9",
+          "count": 23,
+          "total": 133994743
+        },
+        {
+          "name": "<5",
+          "count": 11,
+          "total": 51925990
+        },
+        {
+          "name": "25-49",
+          "count": 10,
+          "total": 97288802
+        },
+        {
+          "name": "N/A",
+          "count": 3,
+          "total": 19931877
+        },
+        {
+          "name": "50-99",
+          "count": 2,
+          "total": 18826490
+        },
+        {
+          "name": "100-249",
+          "count": 1,
+          "total": 6577677
+        },
+        {
+          "name": "250-499",
+          "count": 1,
+          "total": 5389247
+        }
+      ]
+    }
+  ],
+  "truncated": false,
+  "copy": {
+    "topic": "UK fintech companies",
+    "title": "UK fintech companies: Top 100 Ranked by Total Raised (2026)",
+    "metaDescription": "Explore the top 100 uk fintech companies by Total Raised, with a full ranking table, key statistics and insights.",
+    "h1": "UK fintech companies: Top 100 by Total Raised",
+    "intro": [
+      "This page ranks 100 entries in uk fintech companies by Total Raised. Use the table below to compare them side by side.",
+      "Nevis leads with £30.3m, 5% of the total."
+    ],
+    "takeaways": [
+      "The dataset contains 100 entries.",
+      "Combined Total Raised across all 100 entries is £622m.",
+      "The median entry has £4.1m, versus a mean of £6.2m.",
+      "Nevis leads with £30.3m, 5% of the total."
+    ],
+    "sections": [
+      {
+        "heading": "Key statistics",
+        "body": "The dataset contains 100 entries. Combined Total Raised across all 100 entries is £622m. The median entry has £4.1m, versus a mean of £6.2m. Nevis leads with £30.3m, 5% of the total. The top entry is 1.1 times the size of the runner-up. The 10 biggest entries account for 33% of the overall total. London appears in 78 of 100 entries. London entries total £505m. 10-24 appears in 49 of 100 entries. 10-24 entries total £288m."
+      },
+      {
+        "heading": "How the ranking works",
+        "body": "Entries are ordered by Total Raised. All figures come directly from the uploaded dataset (fintech.csv)."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How many entries are in this ranking?",
+        "answer": "There are 100 entries."
+      },
+      {
+        "question": "Who is ranked first?",
+        "answer": "Nevis leads with £30.3m, 5% of the total."
+      }
+    ]
+  }
+}
