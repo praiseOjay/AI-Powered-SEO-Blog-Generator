@@ -1,5 +1,5 @@
-:root { --fg:#16202a; --muted:#52606d; --bg:#fff; --card:#f4f7fa; --line:#d9e1e8; --accent:#0b5fff; }
-@media (prefers-color-scheme: dark) { :root { --fg:#e8eef4; --muted:#a3b1bf; --bg:#10161c; --card:#1a232c; --line:#2d3a46; --accent:#6ea0ff; } }
+:root { --fg:#16202a; --muted:#52606d; --bg:#fff; --card:#f4f7fa; --line:#d9e1e8; --accent:#0b5fff; --on-accent:#fff; }
+@media (prefers-color-scheme: dark) { :root { --fg:#e8eef4; --muted:#a3b1bf; --bg:#10161c; --card:#1a232c; --line:#2d3a46; --accent:#6ea0ff; --on-accent:#10161c; } }
 * { box-sizing: border-box; }
 body { margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; color:var(--fg); background:var(--bg); }
 main, .site-header, .site-footer { max-width:960px; margin:0 auto; padding:1rem; }
@@ -19,7 +19,8 @@ thead th { background:var(--card); position:sticky; top:0; } th button { all:uns
 .bar { height:.8rem; background:var(--accent); border-radius:4px; }
 form.upload { display:grid; gap:.8rem; background:var(--card); border:1px solid var(--line); padding:1rem; border-radius:10px; }
 input[type=text], input[type=file] { padding:.5rem; border:1px solid var(--line); border-radius:6px; background:var(--bg); color:var(--fg); width:100%; }
-button.primary { background:var(--accent); color:#fff; border:0; padding:.7rem 1.1rem; border-radius:8px; font-weight:700; cursor:pointer; } button.primary[disabled] { opacity:.6; cursor:wait; }
+button.primary { background:var(--accent); color:var(--on-accent); border:0; padding:.7rem 1.1rem; border-radius:8px; font-weight:700; cursor:pointer; } button.primary[disabled] { opacity:.6; cursor:wait; }
 .notice { padding:.7rem; border-radius:8px; background:var(--card); border:1px solid var(--line); } .error { color:#c0392b; }
 details { border-top:1px solid var(--line); padding:.6rem 0; } summary { cursor:pointer; font-weight:600; }
 .site-footer { color:var(--muted); font-size:.85rem; }
+input[type=file]::file-selector-button { background:var(--accent); color:var(--on-accent); border:0; border-radius:6px; padding:.45rem .8rem; margin-right:.7rem; font-weight:600; cursor:pointer; }
