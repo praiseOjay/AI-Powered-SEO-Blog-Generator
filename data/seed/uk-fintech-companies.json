@@ -1,15 +1,15 @@
 {
   "slug": "uk-fintech-companies",
-  "createdAt": "2026-11-17T22:48:22.505Z",
-  "generatedBy": "template",
-  "sourceFileName": "fintech.csv",
+  "createdAt": "2026-11-17T22:47:09.355Z",
+  "generatedBy": "workers-ai",
+  "model": "@cf/google/gemma-4-26b-a4b-it",
+  "sourceFileName": "fintech_companies_seed.csv",
   "metric": {
     "key": "c5",
     "label": "Total Raised",
     "unit": "currency",
     "symbol": "£"
   },
-  "nameKey": "c1",
   "columns": [
     {
       "key": "_rank",
@@ -1408,37 +1408,49 @@
   "truncated": false,
   "copy": {
     "topic": "UK fintech companies",
-    "title": "UK fintech companies: Top 100 Ranked by Total Raised (2026)",
-    "metaDescription": "Explore the top 100 UK fintech companies by Total Raised, with a full ranking table, key statistics and insights.",
-    "h1": "UK fintech companies: Top 100 by Total Raised",
+    "title": "UK Fintech Companies Seed Funding 2026",
+    "metaDescription": "A ranking of 100 UK fintech companies by seed funding in 2026. Total investment reaches £622m, with London leading the sector in total capital raised.",
+    "h1": "Seed Stage UK Fintech Companies Ranking 2026",
     "intro": [
-      "This page ranks 100 entries in UK fintech companies by Total Raised. Use the table below to compare them side by side.",
-      "Nevis leads with £30.3m, 5% of the total."
+      "This report ranks 100 fintech companies based on their total seed funding raised in 2026. The dataset provides insights into regional distribution, company size, and investment levels across the sector.",
+      "The total capital raised across all 100 entries is £622m. While the mean investment is £6.2m, the median amount raised stands at £4.1m."
     ],
     "takeaways": [
-      "The dataset contains 100 entries.",
-      "Combined Total Raised across all 100 entries is £622m.",
-      "The median entry has £4.1m, versus a mean of £6.2m.",
-      "Nevis leads with £30.3m, 5% of the total."
+      "London is the most prominent region, accounting for 78 of the 100 entries.",
+      "The top 10 companies represent 33% of the total funding raised.",
+      "Companies with 10-24 employees raised a total of £288m.",
+      "Nevis is the highest-funded company in the dataset with £30.3m."
     ],
     "sections": [
       {
-        "heading": "Key statistics",
-        "body": "The dataset contains 100 entries. Combined Total Raised across all 100 entries is £622m. The median entry has £4.1m, versus a mean of £6.2m. Nevis leads with £30.3m, 5% of the total. The top entry is 1.1 times the size of the runner-up. The 10 biggest entries account for 33% of the overall total. London appears in 78 of 100 entries. London entries total £505m. 10-24 appears in 49 of 100 entries. 10-24 entries total £288m."
+        "heading": "Regional Funding Trends in Fintech",
+        "body": "London dominates the fintech landscape, appearing in 78 of the 100 ranked entries. The capital raised in London totals £505m. Other regions represented in the dataset include the North West with 6 entries, the South West with 5, the East of England with 3, and the South East with 2. This concentration shows a significant focus of seed-stage investment within the capital."
       },
       {
-        "heading": "How the ranking works",
-        "body": "Entries are ordered by Total Raised. All figures come directly from the uploaded dataset (fintech.csv)."
+        "heading": "Workforce Size and Funding Correlation",
+        "body": "The most common employee bracket for these companies is 10-24 staff members, which applies to 49 of the 100 entries. This specific group of companies has raised a total of £288m. Other common sizes include 5-9 employees (23 entries), fewer than 5 employees (11 entries), and 25-49 employees (10 entries). Three entries reported no specific employee count."
+      },
+      {
+        "heading": "Top Performing Seed-Stage Companies",
+        "body": "Nevis leads the rankings with £30.3m raised, representing 5% of the total sector funding. The gap between the first and second ranked companies is 1.1x. Following Nevis, Januus.io secured £27.9m, while Adfin follows with £24.2m. Other notable companies in the top ten include TreeCard, BLEND Network, and TuningBill, all of which have secured significant seed capital."
       }
     ],
     "faq": [
       {
-        "question": "How many entries are in this ranking?",
-        "answer": "There are 100 entries."
+        "question": "Which company raised the most seed funding?",
+        "answer": "Nevis raised the highest amount in the dataset at £30.3m."
       },
       {
-        "question": "Who is ranked first?",
-        "answer": "Nevis leads with £30.3m, 5% of the total."
+        "question": "What is the total amount raised by the top 10 fintech companies?",
+        "answer": "The top 10 entries account for 33% of the overall £622m total raised."
+      },
+      {
+        "question": "Which region has the highest total raised?",
+        "answer": "London is the top region by total raised, with entries totalling £505m."
+      },
+      {
+        "question": "What is the median amount raised by these companies?",
+        "answer": "The median total raised across the 100 entries is £4.1m."
       }
     ]
   }
