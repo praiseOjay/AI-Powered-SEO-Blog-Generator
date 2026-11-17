@@ -9,7 +9,7 @@ useSeoMeta({ title: 'AI-Powered SEO Blog Generator', description: 'Upload a CSV 
     <UploadForm />
     <h2>Generated pages</h2>
     <ul v-if="blogs?.length">
-      <li v-for="b in blogs" :key="b.slug"><NuxtLink :to="`/blog/${b.slug}`">{{ b.title }}</NuxtLink> <small>· {{ b.rows }} rows · {{ b.generatedBy === 'gemini' ? 'AI copy' : 'template copy' }}</small></li>
+      <li v-for="b in blogs" :key="b.slug"><NuxtLink :to="`/blog/${b.slug}`">{{ b.title }}</NuxtLink> <small>· {{ b.rows }} rows · {{ b.generatedBy === 'template' ? 'template copy' : 'AI copy' }}</small></li>
     </ul>
     <p v-else>No pages yet — upload a CSV above.</p>
   </section>

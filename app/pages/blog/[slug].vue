@@ -46,6 +46,6 @@ const max = (items: { count: number }[]) => Math.max(...items.map(i => i.count))
 
     <h2>Frequently asked questions</h2>
     <details v-for="f in b.copy.faq" :key="f.question"><summary>{{ f.question }}</summary><p>{{ f.answer }}</p></details>
-    <p><small>Source: {{ b.sourceFileName }} · {{ b.generatedBy === 'gemini' ? `copy by ${b.model}` : 'template copy' }} · {{ b.createdAt.slice(0, 10) }}</small></p>
+    <p><small>Source: {{ b.sourceFileName }} · {{ b.generatedBy === 'template' ? 'template copy' : `copy by ${b.model}` }} · {{ b.createdAt.slice(0, 10) }}</small></p>
   </article>
 </template>

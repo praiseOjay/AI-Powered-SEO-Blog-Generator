@@ -2,11 +2,11 @@
 // Generates a blog from a CSV and writes it to data/seed/ so it ships with the repo.
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 import { basename } from 'node:path'
-import { buildBlog } from '../server/utils/pipeline'
+import { buildBlog, configFromEnv } from '../server/utils/pipeline'
 
 const [file, topic] = process.argv.slice(2)
 if (!file) { console.error('Usage: tsx scripts/seed.ts <file.csv> [topic]'); process.exit(1) }
-const { blog, warning } = await buildBlog(readFileSync(file, 'utf8'), basename(file), { geminiApiKey: process.env.GEMINI_API_KEY, geminiModel: process.env.GEMINI_MODEL }, topic)
+const { blog, warning } = await buildBlog(readFileSync(file, 'utf8'), basename(file), configFromEnv(process.env), topic)
 blog.slug = blog.slug.replace(/-[a-z0-9]+$/, '') // stable slug for the seeded page
 mkdirSync('data/seed', { recursive: true })
 writeFileSync(`data/seed/${blog.slug}.json`, JSON.stringify(blog, null, 2))

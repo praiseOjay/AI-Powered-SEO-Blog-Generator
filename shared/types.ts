@@ -24,7 +24,7 @@ export interface BlogCopy {
 export interface BlogData {
   slug: string
   createdAt: string
-  generatedBy: 'gemini' | 'template'
+  generatedBy: 'workers-ai' | 'gemini' | 'ollama' | 'template'
   model?: string
   sourceFileName: string
   copy: BlogCopy
