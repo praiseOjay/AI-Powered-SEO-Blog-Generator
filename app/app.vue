@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="shell">
     <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
-      <NuxtLink to="/" class="brand">AI SEO Blog Generator</NuxtLink>
+      <div class="wrap"><NuxtLink to="/" class="brand"><span class="logo" aria-hidden="true">◆</span> AI SEO Blog Generator</NuxtLink></div>
     </header>
-    <main id="main"><NuxtPage /></main>
-    <footer class="site-footer">Copy is AI-assisted; every figure is computed from the uploaded dataset.</footer>
+    <main id="main" class="wrap"><NuxtPage /></main>
+    <footer class="site-footer"><div class="wrap">Copy is AI-assisted; every figure is computed from the uploaded dataset.</div></footer>
   </div>
 </template>

@@ -9,7 +9,7 @@ Upload any ranked CSV → get a server-rendered, SEO-optimised blog page (title,
 
 - **Dataset layer:** columns are type-detected (currency, year, rank, category, URL); the ranking metric and name column are inferred; all statistics are computed in code. Nothing is hardcoded to fintech.
 - **AI layer:** a provider chain (`LLM_PROVIDERS`, default `workers-ai,gemini,ollama`). Each adapter implements one function. The first that works wins; if none do, deterministic template copy is used and the UI says so. The LLM only writes prose from pre-computed stats, so figures cannot be hallucinated. Model output is validated (`cleanCopy`) before it is stored.
-- **Presentation layer:** one Nuxt page renders any `BlogData` JSON; no `v-html`, so CSV and LLM text is always escaped.
+- **Presentation layer:** one Nuxt page renders any `BlogData` JSON, including charts (ranked bars, distribution histogram, category breakdowns, drawn in plain HTML/CSS with real-text fallbacks) and a sortable, paginated ranking table. The server renders **every** row so crawlers and no-JS users get the full ranking; pagination is applied after hydration; no `v-html`, so CSV and LLM text is always escaped.
 - **Providers:** Workers AI (default on Cloudflare, no key; model `WORKERS_AI_MODEL`, default `@cf/google/gemma-4-26b-a4b-it`), Gemini (API key), Ollama (`OLLAMA_URL`; local/self-hosted only, not reachable from Cloudflare).
 
 ## Run locally

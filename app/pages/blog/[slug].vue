@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { BlogData } from '#shared/types'
+import { formatCompact } from '#shared/format'
 const route = useRoute()
 const { data: blog } = await useFetch<BlogData>(`/api/blogs/${route.params.slug}`)
 if (!blog.value) throw createError({ statusCode: 404, statusMessage: 'Blog not found', fatal: true })
@@ -27,34 +28,73 @@ useHead({
     { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: b.copy.faq.map(f => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })) }
   ]).replace(/</g, '\\u003c') }]
 })
-const max = (items: { count: number }[]) => Math.max(...items.map(i => i.count))
+const n = b.rows.length
+const fmt = (v: number) => b.metric?.unit === 'currency' ? formatCompact(v, b.metric.symbol) : formatCompact(v)
+const metricKey = b.metric?.key
+const totalInsight = b.insights.find(i => /^total/i.test(i.label))
+const tiles = b.insights.filter(i => i !== totalInsight && i.label !== 'Entries ranked')
+const topItems = metricKey ? b.rows.slice(0, 10).flatMap((r) => {
+  const name = nameKey ? r[nameKey] : null, v = r[metricKey]
+  return typeof name === 'string' && typeof v === 'number' ? [{ label: name, value: v, text: fmt(v) }] : []
+}) : []
+const metricValues = metricKey ? b.rows.map(r => r[metricKey]).filter((v): v is number => typeof v === 'number') : []
+const categoryCharts = b.categories.map((c) => {
+  const shown = c.items.reduce((s, i) => s + i.count, 0)
+  const items = c.items.map(i => ({ label: i.name, value: i.count, text: `${i.count} · ${Math.round(i.count / n * 100)}%`, note: i.total ? `${fmt(i.total)} total` : undefined }))
+  if (shown < n) items.push({ label: 'Other', value: n - shown, text: `${n - shown} · ${Math.round((n - shown) / n * 100)}%`, note: undefined, muted: true } as never)
+  return { key: c.key, title: `Entries by ${c.label}`, subtitle: `Number of entries per ${c.label.toLowerCase()}${b.metric ? `; funding totals shown beneath` : ''}`, items }
+})
 </script>
 <template>
-  <article>
-    <h1>{{ b.copy.h1 }}</h1>
-    <p v-for="(p, i) in b.copy.intro" :key="i" :class="{ lead: i === 0 }">{{ p }}</p>
-
-    <h2>Key takeaways</h2>
-    <ul><li v-for="(t, i) in b.copy.takeaways" :key="i">{{ t }}</li></ul>
-
-    <h2>Statistics at a glance</h2>
-    <dl class="stats"><div v-for="s in b.insights" :key="s.label" class="stat"><dt>{{ s.label }}</dt><dd>{{ s.value }}</dd></div></dl>
-
-    <template v-for="cat in b.categories" :key="cat.key">
-      <h2>Breakdown by {{ cat.label }}</h2>
-      <ul class="bars">
-        <li v-for="i in cat.items" :key="i.name"><span>{{ i.name }}</span>
-          <span class="bar" :style="{ width: `${(i.count / max(cat.items)) * 100}%` }" aria-hidden="true" /><span>{{ i.count }}</span></li>
+  <article class="post">
+    <header class="hero">
+      <p class="eyebrow">Ranking · {{ n }} entries</p>
+      <h1>{{ b.copy.h1 }}</h1>
+      <p v-for="(p, i) in b.copy.intro" :key="i" :class="{ lead: i === 0 }">{{ p }}</p>
+      <ul class="chips" aria-label="Page details">
+        <li v-if="b.metric">Ranked by {{ b.metric.label }}</li>
+        <li>Updated {{ b.createdAt.slice(0, 10) }}</li>
+        <li>Source: {{ b.sourceFileName }}</li>
       </ul>
-    </template>
+    </header>
 
-    <h2>Full ranking</h2>
-    <RankingTable :blog="b" />
+    <section aria-labelledby="stats-h" class="block">
+      <h2 id="stats-h">Statistics at a glance</h2>
+      <div class="kpi-wrap">
+        <div v-if="totalInsight" class="hero-figure">
+          <span class="hero-label">{{ totalInsight.label }}</span>
+          <span class="hero-value">{{ totalInsight.value }}</span>
+          <span class="hero-detail">{{ totalInsight.detail }}</span>
+        </div>
+        <dl class="stats"><div v-for="s in tiles" :key="s.label" class="stat"><dt>{{ s.label }}</dt><dd>{{ s.value }}</dd></div></dl>
+      </div>
+    </section>
 
-    <section v-for="s in b.copy.sections" :key="s.heading"><h2>{{ s.heading }}</h2><p>{{ s.body }}</p></section>
+    <section aria-labelledby="take-h" class="block">
+      <h2 id="take-h">Key takeaways</h2>
+      <ul class="takeaways"><li v-for="(t, i) in b.copy.takeaways" :key="i">{{ t }}</li></ul>
+    </section>
 
-    <h2>Frequently asked questions</h2>
-    <details v-for="f in b.copy.faq" :key="f.question"><summary>{{ f.question }}</summary><p>{{ f.answer }}</p></details>
-    <p><small>Source: {{ b.sourceFileName }} · {{ b.generatedBy === 'template' ? 'template copy' : `copy by ${b.model}` }} · {{ b.createdAt.slice(0, 10) }}</small></p>
+    <section v-if="topItems.length || categoryCharts.length" aria-labelledby="viz-h" class="block">
+      <h2 id="viz-h">Visual breakdown</h2>
+      <div class="charts">
+        <div v-if="topItems.length" class="card chart-wide"><BarChart :title="`Top ${topItems.length} by ${b.metric?.label}`" subtitle="Highest-ranked entries" :items="topItems" /></div>
+        <div v-if="metricValues.length >= 5" class="card"><Histogram :title="`Distribution of ${b.metric?.label}`" subtitle="Number of entries in each range" :values="metricValues" :format="fmt" /></div>
+        <div v-for="c in categoryCharts" :key="c.key" class="card"><BarChart :title="c.title" :subtitle="c.subtitle" :items="c.items" /></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="rank-h" class="block">
+      <h2 id="rank-h">Full ranking</h2>
+      <RankingTable :blog="b" />
+    </section>
+
+    <section v-for="s in b.copy.sections" :key="s.heading" class="block prose"><h2>{{ s.heading }}</h2><p>{{ s.body }}</p></section>
+
+    <section aria-labelledby="faq-h" class="block">
+      <h2 id="faq-h">Frequently asked questions</h2>
+      <details v-for="f in b.copy.faq" :key="f.question" class="faq"><summary>{{ f.question }}</summary><p>{{ f.answer }}</p></details>
+    </section>
+    <p class="source"><small>{{ b.generatedBy === 'template' ? 'Template copy' : `Copy by ${b.model}` }} · every figure computed from {{ b.sourceFileName }}</small></p>
   </article>
 </template>
