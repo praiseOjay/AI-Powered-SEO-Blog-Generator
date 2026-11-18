@@ -1,6 +1,13 @@
 <script setup lang="ts">
 const { data: blogs } = await useFetch('/api/blogs')
-useSeoMeta({ title: 'AI-Powered SEO Blog Generator', description: 'Upload a CSV dataset and get a server-rendered, SEO-optimised ranking blog page generated with AI.' })
+const description = 'Upload a CSV dataset and get a server-rendered, SEO-optimised ranking blog page generated with AI.'
+const { url } = useSocialMeta({ title: 'AI-Powered SEO Blog Generator', description, path: '/' })
+useHead({
+  script: [{ type: 'application/ld+json', innerHTML: JSON.stringify({
+    '@context': 'https://schema.org', '@type': 'WebApplication', name: 'AI-Powered SEO Blog Generator', description, url,
+    applicationCategory: 'BusinessApplication', operatingSystem: 'Any', inLanguage: 'en-GB'
+  }) }]
+})
 const steps = [
   { t: 'Upload', d: 'Drop in any ranked CSV: companies, products, places.' },
   { t: 'Analyse', d: 'Statistics and charts are computed in code, never invented by the AI.' },
