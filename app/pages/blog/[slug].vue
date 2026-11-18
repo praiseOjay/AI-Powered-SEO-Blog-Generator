@@ -42,7 +42,7 @@ const categoryCharts = b.categories.map((c) => {
   const shown = c.items.reduce((s, i) => s + i.count, 0)
   const items = c.items.map(i => ({ label: i.name, value: i.count, text: `${i.count} · ${Math.round(i.count / n * 100)}%`, note: i.total ? `${fmt(i.total)} total` : undefined }))
   if (shown < n) items.push({ label: 'Other', value: n - shown, text: `${n - shown} · ${Math.round((n - shown) / n * 100)}%`, note: undefined, muted: true } as never)
-  return { key: c.key, title: `Entries by ${c.label}`, subtitle: `Number of entries per ${c.label.toLowerCase()}${b.metric ? `; funding totals shown beneath` : ''}`, items }
+  return { key: c.key, title: `Entries by ${c.label}`, subtitle: `Number of entries per ${c.label.toLowerCase()}${b.metric ? `; ${b.metric.label} totals shown beneath` : ''}`, items }
 })
 </script>
 <template>
