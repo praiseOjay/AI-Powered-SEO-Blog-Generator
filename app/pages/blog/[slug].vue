@@ -78,9 +78,11 @@ const categoryCharts = b.categories.map((c) => {
     <section v-if="topItems.length || categoryCharts.length" aria-labelledby="viz-h" class="block">
       <h2 id="viz-h">Visual breakdown</h2>
       <div class="charts">
-        <div v-if="topItems.length" class="card chart-wide"><BarChart :title="`Top ${topItems.length} by ${b.metric?.label}`" subtitle="Highest-ranked entries" :items="topItems" /></div>
-        <div v-if="metricValues.length >= 5" class="card"><Histogram :title="`Distribution of ${b.metric?.label}`" subtitle="Number of entries in each range" :values="metricValues" :format="fmt" /></div>
-        <div v-for="c in categoryCharts" :key="c.key" class="card"><BarChart :title="c.title" :subtitle="c.subtitle" :items="c.items" /></div>
+        <div v-if="topItems.length" class="card"><BarChart :title="`Top ${topItems.length} by ${b.metric?.label}`" subtitle="Highest-ranked entries" :items="topItems" /></div>
+        <div class="charts-masonry">
+          <div v-if="metricValues.length >= 5" class="card"><Histogram :title="`Distribution of ${b.metric?.label}`" subtitle="Number of entries in each range" :values="metricValues" :format="fmt" /></div>
+          <div v-for="c in categoryCharts" :key="c.key" class="card"><BarChart :title="c.title" :subtitle="c.subtitle" :items="c.items" /></div>
+        </div>
       </div>
     </section>
 
