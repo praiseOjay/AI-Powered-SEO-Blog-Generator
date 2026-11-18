@@ -20,6 +20,21 @@ npm run dev            # http://localhost:3000 (storage: .data/, no Workers AI)
 npm test
 ```
 
+## Duplicates, regeneration and admin
+- **Same dataset twice:** the CSV is hashed (BOM/newline/whitespace-insensitive). A repeat upload reuses the existing page: no LLM call, no duplicate. If that page only has template copy and an AI provider is now available, it is upgraded in place.
+- **Same topic, different data:** gets a new URL (`topic-2`, `topic-3`, ...). Anonymous uploads can never overwrite an existing page, including the showcase.
+- **Indexing:** anonymous uploads are served with `noindex` and are left out of `sitemap.xml`; seeded and admin pages are indexable. Set `INDEX_UPLOADED_PAGES=true` to change that.
+- **Admin** (needs `ADMIN_TOKEN`, 16+ chars; `npx wrangler secret put ADMIN_TOKEN --config .output/server/wrangler.json`):
+  ```bash
+  # replace a page's data and copy, keeping its URL
+  curl -H "Authorization: Bearer $ADMIN_TOKEN" -F file=@new.csv -F replace=my-slug $SITE/api/generate
+  # re-run only the AI copy
+  curl -X POST -H "Authorization: Bearer $ADMIN_TOKEN" $SITE/api/blogs/my-slug/regenerate
+  # delete
+  curl -X DELETE -H "Authorization: Bearer $ADMIN_TOKEN" $SITE/api/blogs/my-slug
+  ```
+- The upload form tells the user when template copy was used or an existing page was reused; template-copy pages also show a banner.
+
 ## Seed the showcase (fintech) page
 ```bash
 cp /path/to/fintech.csv data/fintech.csv
@@ -40,6 +55,7 @@ Seed pages in `data/seed/` are copied into KV on first request. Anyone can then 
 - Workers AI free tier is 10,000 neurons/day (roughly 150 generations with the default model, by my estimate); beyond that the chain falls through to Gemini/Ollama if configured, then template copy.
 - KV is eventually consistent across regions: a freshly generated page can take a short while to appear elsewhere.
 - The Workers AI adapter assumes the model supports `response_format: json_schema`; output is also parsed leniently and validated. It has not been tested against the live binding (local dev can't reach it).
+- Dedupe is by exact content: a CSV with one changed cell is a new dataset. Hash entries live in the same KV namespace.
 - Upload limit 2 MB, 1000 table rows; per-IP rate limit (15/hour) is in-memory, so it is per Worker instance, not global; use Cloudflare rate-limiting rules for real protection.
 - Column inference is heuristic; unusual CSVs may pick a different ranking metric.
 - No auth on uploads (by design for the demo).

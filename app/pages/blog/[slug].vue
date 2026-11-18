@@ -21,9 +21,10 @@ useSeoMeta({
   twitterCard: 'summary'
 })
 useHead({
+  meta: b.indexable === false ? [{ name: 'robots', content: 'noindex, follow' }] : [],
   link: [{ rel: 'canonical', href: url }],
   script: [{ type: 'application/ld+json', innerHTML: JSON.stringify([
-    { '@context': 'https://schema.org', '@type': 'Article', headline: b.copy.title, description: b.copy.metaDescription, datePublished: b.createdAt, mainEntityOfPage: url },
+    { '@context': 'https://schema.org', '@type': 'Article', headline: b.copy.title, description: b.copy.metaDescription, datePublished: b.createdAt, ...(b.updatedAt ? { dateModified: b.updatedAt } : {}), mainEntityOfPage: url },
     { '@context': 'https://schema.org', '@type': 'ItemList', name: b.copy.h1, numberOfItems: b.rows.length, itemListOrder: 'https://schema.org/ItemListOrderAscending', itemListElement: itemList },
     { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: b.copy.faq.map(f => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })) }
   ]).replace(/</g, '\\u003c') }]
@@ -51,9 +52,10 @@ const categoryCharts = b.categories.map((c) => {
       <p class="eyebrow">Ranking · {{ n }} entries</p>
       <h1>{{ b.copy.h1 }}</h1>
       <p v-for="(p, i) in b.copy.intro" :key="i" :class="{ lead: i === 0 }">{{ p }}</p>
+      <p v-if="b.generatedBy === 'template'" class="notice warn" role="note">This page uses template copy because the AI service was unavailable when it was generated. The statistics, charts and table are unaffected.</p>
       <ul class="chips" aria-label="Page details">
         <li v-if="b.metric">Ranked by {{ b.metric.label }}</li>
-        <li>Updated {{ b.createdAt.slice(0, 10) }}</li>
+        <li>{{ b.updatedAt ? 'Updated' : 'Published' }} {{ (b.updatedAt ?? b.createdAt).slice(0, 10) }}</li>
         <li>Source: {{ b.sourceFileName }}</li>
       </ul>
     </header>

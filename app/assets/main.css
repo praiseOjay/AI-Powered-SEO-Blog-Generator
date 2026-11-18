@@ -151,3 +151,8 @@ button.primary:hover:not([disabled]) { filter: brightness(1.08); } button.primar
   td.long, th.long { min-width: 24rem; }
   th, td { padding: .55rem .6rem; }
 }
+
+.notice { background: var(--accent-soft); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 10px; padding: .75rem 1rem; }
+.notice.warn { border-left-color: #d98e04; background: color-mix(in srgb, #d98e04 10%, var(--surface)); }
+.notice p { margin: .2rem 0; }
+form.upload input[type=file], form.upload input[type=text] { width: 100%; }

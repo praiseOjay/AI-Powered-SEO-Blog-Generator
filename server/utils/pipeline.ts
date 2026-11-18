@@ -1,9 +1,9 @@
-import type { BlogData } from '../../shared/types'
+import type { BlogCopy, BlogData } from '../../shared/types'
 import { slugify } from '../../shared/format'
 import { analyzeDataset } from './analyze'
 import { parseCsv } from './csv'
 import { templateCopy } from './copy'
-import { geminiProvider, ollamaProvider, workersAiProvider, type AiBinding, type CopyProvider } from './llm'
+import { geminiProvider, ollamaProvider, workersAiProvider, type Analysis, type AiBinding, type CopyProvider } from './llm'
 
 export interface PipelineConfig {
   /** Order to try providers in, e.g. ['workers-ai','gemini','ollama']. Unconfigured ones are skipped. */
@@ -32,18 +32,36 @@ export function buildProviders(cfg: PipelineConfig): CopyProvider[] {
   return out
 }
 
-/** CSV text -> BlogData. Layers: parse -> analyse (deterministic) -> copy (first working provider, else template). */
-export async function buildBlog(csvText: string, fileName: string, cfg: PipelineConfig, topicHint?: string, providers: CopyProvider[] = buildProviders(cfg)): Promise<{ blog: BlogData; warning?: string }> {
-  const analysis = analyzeDataset(parseCsv(csvText), fileName)
-  let copy, generatedBy: BlogData['generatedBy'] = 'template', model: string | undefined, warning: string | undefined
+export interface CopyResult { copy: BlogCopy; generatedBy: BlogData['generatedBy']; model?: string; warning?: string }
+
+/** First working provider wins; if none work (or none are configured) deterministic template copy is used. */
+export async function generateCopy(a: Analysis, providers: CopyProvider[], topicHint?: string): Promise<CopyResult> {
   const failures: string[] = []
   for (const p of providers) {
-    try { copy = await p.generate(analysis, topicHint); generatedBy = p.name; model = p.model; break }
-    catch (e) { failures.push(p.name); console.error(`[llm:${p.name}]`, e instanceof Error ? e.message : e) }
+    try {
+      const copy = await p.generate(a, topicHint)
+      return { copy, generatedBy: p.name, model: p.model, warning: failures.length ? `Fell back after ${failures.join(', ')} failed; copy written by ${p.name}.` : undefined }
+    } catch (e) { failures.push(p.name); console.error(`[llm:${p.name}]`, e instanceof Error ? e.message : e) }
   }
-  if (!copy) warning = providers.length ? `AI providers failed (${failures.join(', ')}); template copy was used instead.` : 'No AI provider is configured; template copy was used instead.'
-  else if (failures.length) warning = `Fell back after ${failures.join(', ')} failed; copy written by ${generatedBy}.`
-  copy ??= templateCopy(analysis, topicHint)
-  const slug = `${slugify(copy.topic)}-${Date.now().toString(36)}`
-  return { blog: { slug, createdAt: new Date().toISOString(), generatedBy, model, ...analysis, copy }, warning }
+  return {
+    copy: templateCopy(a, topicHint), generatedBy: 'template',
+    warning: providers.length ? `The AI service was unavailable (${failures.join(', ')} failed), so template copy was used.` : 'No AI provider is configured, so template copy was used.'
+  }
+}
+
+export interface BuildOptions { sourceHash?: string; indexable?: boolean }
+
+/** CSV text -> BlogData. Layers: parse -> analyse (deterministic) -> copy (providers, template fallback). */
+export async function buildBlog(csvText: string, fileName: string, cfg: PipelineConfig, topicHint?: string, providers: CopyProvider[] = buildProviders(cfg), opts: BuildOptions = {}): Promise<{ blog: BlogData; warning?: string }> {
+  const analysis = analyzeDataset(parseCsv(csvText), fileName)
+  const { copy, generatedBy, model, warning } = await generateCopy(analysis, providers, topicHint)
+  const blog: BlogData = { slug: slugify(copy.topic), createdAt: new Date().toISOString(), generatedBy, model, ...analysis, copy, sourceHash: opts.sourceHash }
+  if (opts.indexable === false) blog.indexable = false
+  return { blog, warning }
+}
+
+/** Re-runs only the copy step on a stored page. Data, slug and creation date are preserved. */
+export async function regenerateBlog(blog: BlogData, cfg: PipelineConfig, topicHint?: string, providers: CopyProvider[] = buildProviders(cfg)): Promise<{ blog: BlogData; warning?: string }> {
+  const { copy, generatedBy, model, warning } = await generateCopy(blog, providers, topicHint ?? blog.copy.topic)
+  return { blog: { ...blog, copy, generatedBy, model, updatedAt: new Date().toISOString() }, warning }
 }

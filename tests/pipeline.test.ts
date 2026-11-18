@@ -34,3 +34,35 @@ describe('workers ai adapter', () => {
   })
   it('extractJson rejects non-JSON', () => { expect(() => extractJson('nope')).toThrow() })
 })
+
+import { hashCsv, pickSlug } from '../server/utils/hash'
+import { regenerateBlog } from '../server/utils/pipeline'
+
+describe('duplicate detection helpers', () => {
+  it('hashCsv ignores BOM, CRLF and surrounding whitespace but not content', async () => {
+    const a = await hashCsv('a,b\n1,2\n')
+    expect(await hashCsv('﻿a,b\r\n1,2\r\n\r\n')).toBe(a)
+    expect(await hashCsv('a,b\n1,3\n')).not.toBe(a)
+    expect(a).toMatch(/^[0-9a-f]{64}$/)
+  })
+  it('pickSlug returns the first free slug', async () => {
+    const taken = new Set(['topic', 'topic-2'])
+    expect(await pickSlug('topic', async s => taken.has(s))).toBe('topic-3')
+    expect(await pickSlug('fresh', async s => taken.has(s))).toBe('fresh')
+  })
+})
+
+describe('regenerateBlog', () => {
+  it('keeps slug, createdAt and data; replaces copy and stamps updatedAt', async () => {
+    const { blog } = await buildBlog(csv, 's.csv', {}, undefined, [fail('workers-ai')])
+    expect(blog.generatedBy).toBe('template')
+    const { blog: next } = await regenerateBlog(blog, {}, undefined, [ok('gemini')])
+    expect(next.generatedBy).toBe('gemini')
+    expect(next.slug).toBe(blog.slug); expect(next.createdAt).toBe(blog.createdAt); expect(next.rows).toEqual(blog.rows)
+    expect(next.updatedAt).toBeTruthy()
+  })
+  it('marks anonymous builds non-indexable only when asked', async () => {
+    expect((await buildBlog(csv, 's.csv', {}, undefined, [ok('gemini')], { indexable: false })).blog.indexable).toBe(false)
+    expect((await buildBlog(csv, 's.csv', {}, undefined, [ok('gemini')])).blog.indexable).toBeUndefined()
+  })
+})

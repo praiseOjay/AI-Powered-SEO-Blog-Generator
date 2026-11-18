@@ -24,6 +24,11 @@ export interface BlogCopy {
 export interface BlogData {
   slug: string
   createdAt: string
+  updatedAt?: string
+  /** SHA-256 of the normalised source CSV; used to detect duplicate uploads. */
+  sourceHash?: string
+  /** false = served with noindex and left out of the sitemap (anonymous uploads by default). Absent = indexable. */
+  indexable?: boolean
   generatedBy: 'workers-ai' | 'gemini' | 'ollama' | 'template'
   model?: string
   sourceFileName: string
