@@ -4,7 +4,6 @@ Upload any CSV dataset and get a server-rendered, SEO-optimised blog page: title
 
 **Live demo:** https://praiseojay-ai-powered-seo-blog-generator.overload-api.workers.dev/
 **Showcase page (UK fintech, top 100 by total raised):** `/blog/uk-fintech-companies`
-**Reflection report:** [`docs/technical-reflection.pdf`](docs/technical-reflection.pdf)
 
 The interviewer needs no keys, installs or setup: open the URL, upload a CSV, and a new page is generated and shown.
 
@@ -129,7 +128,6 @@ server/utils/   csv, analyze, llm (providers), pipeline, copy (template), store,
 shared/         types and formatting helpers used by server and app
 data/seed/      pre-generated pages shipped with the repo
 tests/          Vitest unit tests
-docs/           technical reflection report (PDF)
 ```
 
 ## Limitations
